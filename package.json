@@ -1,0 +1,24 @@
+{
+  "name": "lab2-vitest-module-testing",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Лабораторна робота № 2. Модульне тестування бізнес-логіки засобами Vitest",
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "coverage": "vitest run --coverage",
+    "coverage:watch": "vitest --coverage",
+    "typecheck": "tsc --noEmit",
+    "experiment": "node scripts/experiment.mjs",
+    "experiment:gap": "node scripts/experiment.mjs tests/order.test.ts",
+    "experiment:gap:after": "node scripts/experiment.mjs tests/order.test.ts tests/experiment/no-assertion.test.ts"
+  },
+  "devDependencies": {
+    "@types/node": "26.6.5",
+    "@vitest/coverage-v8": "5.0.5",
+    "typescript": "5.9.3",
+    "vite": "8.3.5",
+    "vitest": "5.0.5"
+  }
+}
