@@ -7,5 +7,5 @@ export function calcParkingFee(minutes: number, options: ParkingOptions = {}): n
   if (!Number.isInteger(minutes) || minutes < 0) throw new Error('INVALID_DURATION');
   if (minutes <= FREE_MINUTES) return 0;
   if (minutes <= HOUR) return FIRST_FEE;
-  return FIRST_FEE + Math.ceil((minutes - HOUR) / HOUR) * EXTRA_FEE;
+  return Math.min(FIRST_FEE + Math.ceil((minutes - HOUR) / HOUR) * EXTRA_FEE, 200);
 }
