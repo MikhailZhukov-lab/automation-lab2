@@ -5,8 +5,8 @@
 
  Test Files  2 passed (2)
       Tests  60 passed (60)
-   Start at  11:07:06
-   Duration  212ms (transform 40%, worker 26%, import 24%, tests 11%)
+   Start at  11:08:03
+   Duration  214ms (import 39%, transform 31%, worker 21%, tests 9%)
 
  % Coverage report from v8
 No files with missing coverage.
@@ -16,5 +16,5 @@ No files with missing coverage.
 Statements   : 100% ( 37/37 )
 Branches     : 100% ( 24/24 )
 Functions    : 100% ( 7/7 )
-Lines        : 100% ( 30/30 )
+Lines        : 100% ( 33/33 )
 ================================================================================

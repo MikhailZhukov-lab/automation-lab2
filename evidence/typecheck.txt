@@ -1,1 +1,1 @@
-TypeScript: no errors
+No errors

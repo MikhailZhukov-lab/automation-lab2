@@ -1,0 +1,38 @@
+85915d6 chore: configure TypeScript and Vitest
+5584c9a red: parking 1 invalid duration
+0611f00 green: parking 1 invalid duration
+5d0debb red: parking 2 free minutes
+dba2c7b green: parking 2 free minutes
+c9ca3f7 red: parking 3 first hour
+bba1a9a green: parking 3 first hour
+1cb83cb red: parking 4 started hours
+efcad9f green: parking 4 started hours
+22ba689 refactor: parking 4 clarify responsibilities
+aa91ffd red: parking 5 daily cap
+4e17fd9 green: parking 5 daily cap
+daf2744 red: parking 6 night rate
+57eeb82 green: parking 6 night rate
+59423a6 red: parking 7 weekend rate
+a526261 green: parking 7 weekend rate
+cb8b6a1 test: parking rounding examples already pass
+7ecb023 refactor: parking separate validation base fee and rates
+e681338 red: delivery 1 free delivery threshold
+d79d8ab green: delivery 1 free delivery threshold
+0507e8a red: delivery 2 base fee below threshold
+0832449 green: delivery 2 base fee below threshold
+b350a84 refactor: delivery 2 clarify responsibilities
+bf61a10 red: delivery 3 started extra kilograms
+b1eea77 green: delivery 3 started extra kilograms
+6434ca8 refactor: delivery 3 clarify responsibilities
+25a9d7f red: delivery 4 maximum fee
+24bd808 green: delivery 4 maximum fee
+b48ce34 refactor: delivery 4 clarify responsibilities
+562a8e5 red: delivery 5 express after cap
+7498042 green: delivery 5 express after cap
+eaba722 refactor: delivery 5 clarify responsibilities
+cf287c8 red: delivery 6 reject invalid weight before free delivery
+7602e67 green: delivery 6 reject invalid weight before free delivery
+3d884e0 red: delivery 7 reject invalid total
+0800393 green: delivery 7 reject invalid total
+90ffc51 refactor: delivery 7 clarify responsibilities
+b2c4502 chore: save final verification and runnable examples

@@ -1,4 +1,7 @@
-export interface ParkingOptions { night?: boolean; weekend?: boolean; }
+export interface ParkingOptions {
+  night?: boolean;
+  weekend?: boolean;
+}
 const FREE_MINUTES = 15;
 const HOUR = 60;
 const FIRST_FEE = 30;
@@ -8,7 +11,8 @@ const NIGHT_RATE = 0.5;
 const WEEKEND_RATE = 0.8;
 
 function assertValidDuration(minutes: number): void {
-  if (!Number.isInteger(minutes) || minutes < 0) throw new Error('INVALID_DURATION');
+  if (!Number.isInteger(minutes) || minutes < 0)
+    throw new Error("INVALID_DURATION");
 }
 function calcBaseFee(minutes: number): number {
   if (minutes <= FREE_MINUTES) return 0;
@@ -20,7 +24,10 @@ function applyRates(fee: number, options: ParkingOptions): number {
   if (options.weekend) fee *= WEEKEND_RATE;
   return fee;
 }
-export function calcParkingFee(minutes: number, options: ParkingOptions = {}): number {
+export function calcParkingFee(
+  minutes: number,
+  options: ParkingOptions = {},
+): number {
   assertValidDuration(minutes);
   return Math.round(applyRates(calcBaseFee(minutes), options) * 100) / 100;
 }
