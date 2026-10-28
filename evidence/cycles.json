@@ -14,5 +14,13 @@
     "red": "5d0debb",
     "green": "dba2c7b",
     "refactor": ""
+  },
+  {
+    "module": "parking",
+    "cycle": 3,
+    "title": "first hour",
+    "red": "c9ca3f7",
+    "green": "bba1a9a",
+    "refactor": ""
   }
 ]
