@@ -1,0 +1,24 @@
+
+ RUN  v5.0.5 D:/LABS/TEST3/lab3-tdd
+
+ ❯ tests/parking.test.ts (0 test)
+
+ Test Files  1 failed (1)
+      Tests  no tests
+   Start at  11:06:44
+   Duration  170ms (worker 94%, environment 6%)
+
+
+⎯⎯⎯⎯⎯⎯ Failed Suites 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/parking.test.ts [ tests/parking.test.ts ]
+Error: Cannot find module '../src/parking' imported from D:/LABS/TEST3/lab3-tdd/tests/parking.test.ts
+ ❯ tests/parking.test.ts:2:1
+      1| import { it, expect } from 'vitest';
+      2| import { calcParkingFee } from '../src/parking';
+       | ^
+      3|
+      4| it.each([-1, -60, 10.5, NaN, Infinity])('reject duration %s', m => { e…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
