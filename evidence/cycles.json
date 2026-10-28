@@ -78,5 +78,13 @@
     "red": "bf61a10",
     "green": "b1eea77",
     "refactor": "6434ca8"
+  },
+  {
+    "module": "delivery",
+    "cycle": 4,
+    "title": "maximum fee",
+    "red": "25a9d7f",
+    "green": "24bd808",
+    "refactor": "b48ce34"
   }
 ]
