@@ -1,0 +1,36 @@
+
+ RUN  v5.0.5 D:/LABS/TEST3/lab3-tdd
+
+ ❯ tests/parking.test.ts (12 tests | 3 failed) 10ms
+   × first hour 16 5ms
+   × first hour 59 1ms
+   × first hour 60 0ms
+
+ Test Files  1 failed (1)
+      Tests  3 failed | 9 passed (12)
+   Start at  11:06:47
+   Duration  177ms (transform 36%, import 36%, tests 20%, worker 8%)
+
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 3 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/parking.test.ts > first hour 16
+ FAIL  tests/parking.test.ts > first hour 59
+ FAIL  tests/parking.test.ts > first hour 60
+AssertionError: expected +0 to be 30 // Object.is equality
+
+- Expected
++ Received
+
+- 30
++ 0
+
+ ❯ tests/parking.test.ts:8:73
+      6| it.each([0, 1, 14, 15])('free %s', m => { expect(calcParkingFee(m)).to…
+      7|
+      8| it.each([16, 59, 60])('first hour %s', m => { expect(calcParkingFee(m)…
+       |                                                                         ^
+      9|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/3]⎯
+
