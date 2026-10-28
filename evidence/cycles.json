@@ -46,5 +46,13 @@
     "red": "daf2744",
     "green": "57eeb82",
     "refactor": ""
+  },
+  {
+    "module": "parking",
+    "cycle": 7,
+    "title": "weekend rate",
+    "red": "59423a6",
+    "green": "a526261",
+    "refactor": ""
   }
 ]
