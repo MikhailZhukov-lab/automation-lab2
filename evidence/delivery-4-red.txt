@@ -1,0 +1,51 @@
+
+ RUN  v5.0.5 D:/LABS/TEST3/lab3-tdd
+
+ ❯ tests/delivery.test.ts (16 tests | 2 failed) 9ms
+   × cap weight 30.001 -> 300 5ms
+   × cap weight 100 -> 300 0ms
+
+ Test Files  1 failed | 1 passed (2)
+      Tests  2 failed | 44 passed (46)
+   Start at  11:06:59
+   Duration  184ms (transform 39%, import 35%, tests 18%, worker 9%)
+
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/delivery.test.ts > cap weight 30.001 -> 300
+AssertionError: expected 310 to be 300 // Object.is equality
+
+- Expected
++ Received
+
+- 300
++ 310
+
+ ❯ tests/delivery.test.ts:10:131
+      8| it.each([[5.001,60],[5.999,60],[6,60],[6.001,70],[10,100]])('weight %s…
+      9|
+     10| it.each([[29,290],[29.001,300],[30,300],[30.001,300],[100,300]])('cap …
+       |                                                                                                                                   ^
+     11|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯
+
+ FAIL  tests/delivery.test.ts > cap weight 100 -> 300
+AssertionError: expected 1000 to be 300 // Object.is equality
+
+- Expected
++ Received
+
+- 300
++ 1000
+
+ ❯ tests/delivery.test.ts:10:131
+      8| it.each([[5.001,60],[5.999,60],[6,60],[6.001,70],[10,100]])('weight %s…
+      9|
+     10| it.each([[29,290],[29.001,300],[30,300],[30.001,300],[100,300]])('cap …
+       |                                                                                                                                   ^
+     11|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯
+

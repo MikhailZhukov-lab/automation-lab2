@@ -70,5 +70,13 @@
     "red": "0507e8a",
     "green": "0832449",
     "refactor": "b350a84"
+  },
+  {
+    "module": "delivery",
+    "cycle": 3,
+    "title": "started extra kilograms",
+    "red": "bf61a10",
+    "green": "b1eea77",
+    "refactor": "6434ca8"
   }
 ]
