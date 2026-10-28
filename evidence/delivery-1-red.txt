@@ -1,0 +1,24 @@
+
+ RUN  v5.0.5 D:/LABS/TEST3/lab3-tdd
+
+ ❯ tests/delivery.test.ts (0 test)
+
+ Test Files  1 failed | 1 passed (2)
+      Tests  30 passed (30)
+   Start at  11:06:55
+   Duration  168ms (transform 33%, import 30%, worker 20%, tests 16%, environment 1%)
+
+
+⎯⎯⎯⎯⎯⎯ Failed Suites 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/delivery.test.ts [ tests/delivery.test.ts ]
+Error: Cannot find module '../src/delivery' imported from D:/LABS/TEST3/lab3-tdd/tests/delivery.test.ts
+ ❯ tests/delivery.test.ts:2:1
+      1| import { it, expect } from 'vitest';
+      2| import { calcDeliveryFee } from '../src/delivery';
+       | ^
+      3|
+      4| it.each([1000,1000.01,1500])('free total %s', t => { expect(calcDelive…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
