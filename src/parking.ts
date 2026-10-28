@@ -9,5 +9,6 @@ export function calcParkingFee(minutes: number, options: ParkingOptions = {}): n
   const hours = Math.max(0, Math.ceil((minutes - HOUR) / HOUR));
   let fee = Math.min(FIRST_FEE + hours * EXTRA_FEE, 200);
   if (options.night) fee /= 2;
+  if (options.weekend) fee *= 0.8;
   return fee;
 }
