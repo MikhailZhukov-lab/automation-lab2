@@ -1,0 +1,9 @@
+
+ RUN  v5.0.5 D:/LABS/TEST3/lab3-tdd
+
+
+ Test Files  2 passed (2)
+      Tests  33 passed (33)
+   Start at  11:06:55
+   Duration  167ms (transform 40%, import 37%, tests 12%, worker 10%)
+
