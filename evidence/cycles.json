@@ -30,5 +30,13 @@
     "red": "1cb83cb",
     "green": "efcad9f",
     "refactor": "22ba689"
+  },
+  {
+    "module": "parking",
+    "cycle": 5,
+    "title": "daily cap",
+    "red": "aa91ffd",
+    "green": "4e17fd9",
+    "refactor": ""
   }
 ]

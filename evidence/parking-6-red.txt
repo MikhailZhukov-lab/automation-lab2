@@ -1,0 +1,70 @@
+
+ RUN  v5.0.5 D:/LABS/TEST3/lab3-tdd
+
+ ❯ tests/parking.test.ts (25 tests | 3 failed) 11ms
+   × night 60 -> 15 5ms
+   × night 121 -> 35 0ms
+   × night 600 -> 100 0ms
+
+ Test Files  1 failed (1)
+      Tests  3 failed | 22 passed (25)
+   Start at  11:06:51
+   Duration  179ms (import 36%, transform 36%, tests 21%, worker 7%)
+
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 3 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/parking.test.ts > night 60 -> 15
+AssertionError: expected 30 to be 15 // Object.is equality
+
+- Expected
++ Received
+
+- 15
++ 30
+
+ ❯ tests/parking.test.ts:14:114
+     12| it.each([[540,190],[541,200],[600,200],[1440,200]])('cap %s -> %s', (m…
+     13|
+     14| it.each([[15,0],[60,15],[121,35],[600,100]])('night %s -> %s', (m,e) =…
+       |                                                                                                                  ^
+     15|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/3]⎯
+
+ FAIL  tests/parking.test.ts > night 121 -> 35
+AssertionError: expected 70 to be 35 // Object.is equality
+
+- Expected
++ Received
+
+- 35
++ 70
+
+ ❯ tests/parking.test.ts:14:114
+     12| it.each([[540,190],[541,200],[600,200],[1440,200]])('cap %s -> %s', (m…
+     13|
+     14| it.each([[15,0],[60,15],[121,35],[600,100]])('night %s -> %s', (m,e) =…
+       |                                                                                                                  ^
+     15|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/3]⎯
+
+ FAIL  tests/parking.test.ts > night 600 -> 100
+AssertionError: expected 200 to be 100 // Object.is equality
+
+- Expected
++ Received
+
+- 100
++ 200
+
+ ❯ tests/parking.test.ts:14:114
+     12| it.each([[540,190],[541,200],[600,200],[1440,200]])('cap %s -> %s', (m…
+     13|
+     14| it.each([[15,0],[60,15],[121,35],[600,100]])('night %s -> %s', (m,e) =…
+       |                                                                                                                  ^
+     15|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/3]⎯
+

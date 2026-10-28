@@ -10,3 +10,5 @@ it.each([16, 59, 60])('first hour %s', m => { expect(calcParkingFee(m)).toBe(30)
 it.each([[61,50],[119,50],[120,50],[121,70],[180,70]])('hours %s -> %s', (m,e) => { expect(calcParkingFee(m)).toBe(e); });
 
 it.each([[540,190],[541,200],[600,200],[1440,200]])('cap %s -> %s', (m,e) => { expect(calcParkingFee(m)).toBe(e); });
+
+it.each([[15,0],[60,15],[121,35],[600,100]])('night %s -> %s', (m,e) => { expect(calcParkingFee(m,{night:true})).toBe(e); });
