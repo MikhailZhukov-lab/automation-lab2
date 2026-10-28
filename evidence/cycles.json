@@ -54,5 +54,13 @@
     "red": "59423a6",
     "green": "a526261",
     "refactor": ""
+  },
+  {
+    "module": "delivery",
+    "cycle": 1,
+    "title": "free delivery threshold",
+    "red": "e681338",
+    "green": "d79d8ab",
+    "refactor": ""
   }
 ]

@@ -1,0 +1,36 @@
+
+ RUN  v5.0.5 D:/LABS/TEST3/lab3-tdd
+
+ ❯ tests/delivery.test.ts (6 tests | 3 failed) 8ms
+   × base total 0 weight 0.001 5ms
+   × base total 500 weight 4.999 1ms
+   × base total 999.99 weight 5 0ms
+
+ Test Files  1 failed | 1 passed (2)
+      Tests  3 failed | 33 passed (36)
+   Start at  11:06:56
+   Duration  187ms (transform 36%, import 36%, tests 19%, worker 9%)
+
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 3 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/delivery.test.ts > base total 0 weight 0.001
+ FAIL  tests/delivery.test.ts > base total 500 weight 4.999
+ FAIL  tests/delivery.test.ts > base total 999.99 weight 5
+AssertionError: expected +0 to be 50 // Object.is equality
+
+- Expected
++ Received
+
+- 50
++ 0
+
+ ❯ tests/delivery.test.ts:6:112
+      4| it.each([1000,1000.01,1500])('free total %s', t => { expect(calcDelive…
+      5|
+      6| it.each([[0,0.001],[500,4.999],[999.99,5]])('base total %s weight %s',…
+       |                                                                                                                ^
+      7|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/3]⎯
+
