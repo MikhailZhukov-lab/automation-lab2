@@ -1,0 +1,24 @@
+{
+  "name": "lab3-tdd",
+  "version": "1.0.0",
+  "description": "Лабораторна 3: TDD, варіант 1",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest run",
+    "coverage": "vitest run --coverage",
+    "typecheck": "tsc --noEmit",
+    "demo": "node --experimental-strip-types src/demo.ts"
+  },
+  "keywords": [],
+  "author": "Жуков Михайло Володимирович",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "@vitest/coverage-v8": "^5.0.5",
+    "playwright": "^1.64.1",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.5"
+  },
+  "private": true
+}
