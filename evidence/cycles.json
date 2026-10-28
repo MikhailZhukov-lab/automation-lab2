@@ -38,5 +38,13 @@
     "red": "aa91ffd",
     "green": "4e17fd9",
     "refactor": ""
+  },
+  {
+    "module": "parking",
+    "cycle": 6,
+    "title": "night rate",
+    "red": "daf2744",
+    "green": "57eeb82",
+    "refactor": ""
   }
 ]
