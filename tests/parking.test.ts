@@ -8,3 +8,5 @@ it.each([0, 1, 14, 15])('free %s', m => { expect(calcParkingFee(m)).toBe(0); });
 it.each([16, 59, 60])('first hour %s', m => { expect(calcParkingFee(m)).toBe(30); });
 
 it.each([[61,50],[119,50],[120,50],[121,70],[180,70]])('hours %s -> %s', (m,e) => { expect(calcParkingFee(m)).toBe(e); });
+
+it.each([[540,190],[541,200],[600,200],[1440,200]])('cap %s -> %s', (m,e) => { expect(calcParkingFee(m)).toBe(e); });
