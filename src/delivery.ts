@@ -5,5 +5,5 @@ const BASE_FEE = 50;
 const EXTRA_KG_FEE = 10;
 export function calcDeliveryFee(orderTotal: number, weightKg: number, options: DeliveryOptions = {}): number {
   if (orderTotal >= FREE_TOTAL) return 0;
-  return BASE_FEE + Math.ceil(Math.max(0, weightKg - BASE_WEIGHT)) * EXTRA_KG_FEE;
+  return Math.min(BASE_FEE + Math.ceil(Math.max(0, weightKg - BASE_WEIGHT)) * EXTRA_KG_FEE, 300);
 }
