@@ -1,0 +1,74 @@
+
+ RUN  v5.0.5 D:/LABS/TEST3/lab3-tdd
+
+ ❯ tests/delivery.test.ts (11 tests | 5 failed) 10ms
+   × weight 5.001 -> 60 5ms
+   × weight 5.999 -> 60 0ms
+   × weight 6 -> 60 0ms
+   × weight 6.001 -> 70 0ms
+   × weight 10 -> 100 0ms
+
+ Test Files  1 failed | 1 passed (2)
+      Tests  5 failed | 36 passed (41)
+   Start at  11:06:58
+   Duration  194ms (import 36%, transform 36%, tests 19%, worker 9%)
+
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 5 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/delivery.test.ts > weight 5.001 -> 60
+ FAIL  tests/delivery.test.ts > weight 5.999 -> 60
+ FAIL  tests/delivery.test.ts > weight 6 -> 60
+AssertionError: expected 50 to be 60 // Object.is equality
+
+- Expected
++ Received
+
+- 60
++ 50
+
+ ❯ tests/delivery.test.ts:8:122
+      6| it.each([[0,0.001],[500,4.999],[999.99,5]])('base total %s weight %s',…
+      7|
+      8| it.each([[5.001,60],[5.999,60],[6,60],[6.001,70],[10,100]])('weight %s…
+       |                                                                                                                          ^
+      9|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/5]⎯
+
+ FAIL  tests/delivery.test.ts > weight 6.001 -> 70
+AssertionError: expected 50 to be 70 // Object.is equality
+
+- Expected
++ Received
+
+- 70
++ 50
+
+ ❯ tests/delivery.test.ts:8:122
+      6| it.each([[0,0.001],[500,4.999],[999.99,5]])('base total %s weight %s',…
+      7|
+      8| it.each([[5.001,60],[5.999,60],[6,60],[6.001,70],[10,100]])('weight %s…
+       |                                                                                                                          ^
+      9|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/5]⎯
+
+ FAIL  tests/delivery.test.ts > weight 10 -> 100
+AssertionError: expected 50 to be 100 // Object.is equality
+
+- Expected
++ Received
+
+- 100
++ 50
+
+ ❯ tests/delivery.test.ts:8:122
+      6| it.each([[0,0.001],[500,4.999],[999.99,5]])('base total %s weight %s',…
+      7|
+      8| it.each([[5.001,60],[5.999,60],[6,60],[6.001,70],[10,100]])('weight %s…
+       |                                                                                                                          ^
+      9|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/5]⎯
+

@@ -62,5 +62,13 @@
     "red": "e681338",
     "green": "d79d8ab",
     "refactor": ""
+  },
+  {
+    "module": "delivery",
+    "cycle": 2,
+    "title": "base fee below threshold",
+    "red": "0507e8a",
+    "green": "0832449",
+    "refactor": "b350a84"
   }
 ]
