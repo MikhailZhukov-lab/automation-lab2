@@ -102,5 +102,13 @@
     "red": "cf287c8",
     "green": "7602e67",
     "refactor": ""
+  },
+  {
+    "module": "delivery",
+    "cycle": 7,
+    "title": "reject invalid total",
+    "red": "3d884e0",
+    "green": "0800393",
+    "refactor": "90ffc51"
   }
 ]

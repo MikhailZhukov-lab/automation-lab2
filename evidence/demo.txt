@@ -1,0 +1,4 @@
+Delivery (500 UAH, 6 kg): 60
+Express (500 UAH, 100 kg): 600
+Free express (1000 UAH, 100 kg): 0
+Parking (600 min, night+weekend): 80

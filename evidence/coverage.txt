@@ -1,0 +1,20 @@
+
+ RUN  v5.0.5 D:/LABS/TEST3/lab3-tdd
+      Coverage enabled with v8
+
+
+ Test Files  2 passed (2)
+      Tests  60 passed (60)
+   Start at  11:07:06
+   Duration  212ms (transform 40%, worker 26%, import 24%, tests 11%)
+
+ % Coverage report from v8
+No files with missing coverage.
+2 files fully covered.
+
+=============================== Coverage summary ===============================
+Statements   : 100% ( 37/37 )
+Branches     : 100% ( 24/24 )
+Functions    : 100% ( 7/7 )
+Lines        : 100% ( 30/30 )
+================================================================================
