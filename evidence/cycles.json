@@ -94,5 +94,13 @@
     "red": "562a8e5",
     "green": "7498042",
     "refactor": "eaba722"
+  },
+  {
+    "module": "delivery",
+    "cycle": 6,
+    "title": "reject invalid weight before free delivery",
+    "red": "cf287c8",
+    "green": "7602e67",
+    "refactor": ""
   }
 ]
