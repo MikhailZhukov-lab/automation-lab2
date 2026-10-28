@@ -36,3 +36,4 @@ cf287c8 red: delivery 6 reject invalid weight before free delivery
 0800393 green: delivery 7 reject invalid total
 90ffc51 refactor: delivery 7 clarify responsibilities
 b2c4502 chore: save final verification and runnable examples
+4b63fe4 refactor: format source and tests for readability
