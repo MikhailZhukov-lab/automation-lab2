@@ -10,3 +10,5 @@ it.each([[5.001,60],[5.999,60],[6,60],[6.001,70],[10,100]])('weight %s -> %s', (
 it.each([[29,290],[29.001,300],[30,300],[30.001,300],[100,300]])('cap weight %s -> %s', (w,e) => { expect(calcDeliveryFee(500,w)).toBe(e); });
 
 it.each([[999.99,1,100],[500,6,120],[500,100,600],[1000,100,0],[1000.01,6,0]])('express %s %s -> %s', (t,w,e) => { expect(calcDeliveryFee(t,w,{express:true})).toBe(e); });
+
+it.each([0,-1,NaN,Infinity,-Infinity])('invalid weight %s', w => { expect(() => calcDeliveryFee(1000,w)).toThrow('INVALID_WEIGHT'); });

@@ -1,0 +1,40 @@
+
+ RUN  v5.0.5 D:/LABS/TEST3/lab3-tdd
+
+ ❯ tests/delivery.test.ts (26 tests | 5 failed) 10ms
+   × invalid weight 0 4ms
+   × invalid weight -1 0ms
+   × invalid weight NaN 0ms
+   × invalid weight Infinity 0ms
+   × invalid weight -Infinity 0ms
+
+ Test Files  1 failed | 1 passed (2)
+      Tests  5 failed | 51 passed (56)
+   Start at  11:07:03
+   Duration  203ms (transform 37%, import 34%, tests 19%, worker 9%)
+
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 5 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/delivery.test.ts > invalid weight 0
+ FAIL  tests/delivery.test.ts > invalid weight -1
+ FAIL  tests/delivery.test.ts > invalid weight NaN
+ FAIL  tests/delivery.test.ts > invalid weight Infinity
+ FAIL  tests/delivery.test.ts > invalid weight -Infinity
+AssertionError: expected [Function] to throw an error
+
+- Expected:
+null
+
++ Received:
+undefined
+
+ ❯ tests/delivery.test.ts:14:106
+     12| it.each([[999.99,1,100],[500,6,120],[500,100,600],[1000,100,0],[1000.0…
+     13|
+     14| it.each([0,-1,NaN,Infinity,-Infinity])('invalid weight %s', w => { exp…
+       |                                                                                                          ^
+     15|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/5]⎯
+
