@@ -1,0 +1,32 @@
+﻿Лабораторна робота № 5. Варіант 1. Жуков Михайло Володимирович
+
+Гілка: 5 (продовження гілки 4).
+Потрібні Node.js і npm. У PowerShell використовуйте npm.cmd.
+
+npm ci
+npm run typecheck
+npm test
+npm run test:api
+npm run coverage
+
+Для Postman/Newman:
+npm start
+В іншому терміналі: npm run newman
+Імпортуйте postman/orders.postman_collection.json у Postman і запустіть всю колекцію.
+baseUrl = http://127.0.0.1:3000. Login і Create order задають token та orderId.
+
+Варіант 1:
+PATCH /orders/:id/status, тіло {"status":"paid"} або {"status":"shipped"}.
+Дозволено new -> paid -> shipped. Інші переходи: 409 INVALID_TRANSITION.
+Невідомий status: 400 INVALID_STATUS. Без токена: 401. Чуже/відсутнє замовлення: 404.
+
+Експеримент:
+У src/app.ts лише у відповіді POST /orders замінити .json(toPublic(order)) на .json(order).
+Запустити npm run test:api -- tests/api/orders.test.ts.
+Очікується 11 успішних і 2 невдалих тести: схема та порівняння POST/GET.
+Після цього обов'язково повернути toPublic(order) і виконати npm test.
+
+Фактична перевірка: 161/161 тестів, 48 API, з них 26 для варіанта 1.
+Newman і Postman: по 22/22 перевірок, 10 запитів.
+Результати results/ і coverage/ генеруються локально й не додаються в Git.
+Звіт Word зберігається поза репозиторієм.

@@ -1,27 +1,40 @@
 {
-  "name": "lab4-test-doubles-msw",
+  "name": "lab5-rest-api",
   "version": "1.0.0",
-  "description": "Laboratory 4: test doubles and MSW, variant 1",
+  "description": "Laboratory 5: REST API testing, variant 1",
   "main": "index.js",
   "scripts": {
     "test": "vitest run",
     "coverage": "vitest run --coverage",
     "typecheck": "tsc --noEmit",
     "demo": "node --experimental-strip-types src/demo.ts",
-    "test:lab4": "vitest run tests/order-service.test.ts tests/retry.test.ts tests/rate-provider.test.ts tests/cancellation-service.test.ts tests/payment-gateway.test.ts"
+    "test:lab4": "vitest run tests/order-service.test.ts tests/retry.test.ts tests/rate-provider.test.ts tests/cancellation-service.test.ts tests/payment-gateway.test.ts",
+    "start": "tsx src/server.ts",
+    "test:api": "vitest run --project api",
+    "newman": "newman run postman/orders.postman_collection.json --reporters cli,junit,json --reporter-junit-export results/newman.xml --reporter-json-export results/newman.json"
   },
   "keywords": [],
   "author": "Жуков Михайло Володимирович",
   "license": "ISC",
   "type": "module",
   "devDependencies": {
+    "@types/express": "^5.0.6",
     "@types/node": "^26.6.5",
+    "@types/supertest": "^7.2.1",
     "@vitest/coverage-v8": "^5.0.5",
+    "ajv": "^8.20.0",
+    "ajv-formats": "^3.0.1",
     "msw": "^2.15.0",
+    "newman": "^6.2.3",
     "playwright": "^1.64.1",
     "prettier": "^3.9.10",
+    "supertest": "^7.3.1",
+    "tsx": "^4.23.15",
     "typescript": "^7.0.2",
     "vitest": "^5.0.5"
   },
-  "private": true
+  "private": true,
+  "dependencies": {
+    "express": "^5.3.0"
+  }
 }
