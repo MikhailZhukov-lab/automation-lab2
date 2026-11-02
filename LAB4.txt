@@ -1,0 +1,39 @@
+Лабораторна робота № 4. Варіант 1
+Автор: Жуков Михайло Володимирович
+
+Гілка 4 продовжує лабораторну № 3.
+Показова частина: OrderService, HttpRateProvider, withRetry.
+Варіант 1: CancellationService та HttpPaymentGateway.
+
+Запуск із каталогу репозиторію:
+  npm ci
+  npm run typecheck
+  npm run test:lab4
+  npm test
+  npm run coverage
+У PowerShell за потреби використовуйте npm.cmd.
+HTML-покриття: coverage/index.html.
+
+53 нові тести, 60 попередніх; загалом 113.
+MSW 2: onUnhandledRequest: error, resetHandlers після кожного тесту.
+Date фіксується; retry використовує керовані таймери.
+
+Експеримент кроку 9:
+Перед await this.repo.save(record) тимчасово додано:
+  const draft = { ...record, status: 'draft' };
+  await this.repo.save(draft);
+Запуск npm test -- tests/order-service.test.ts: 10 passed, 1 failed.
+Впав interaction expects one save; state remains correct after refactoring пройшов.
+Початкову реалізацію відновлено; 53 тести лабораторної проходять.
+
+HTTP-контракт: POST /refunds, тіло { paymentId, amount }.
+Успіх: { status: 'refunded', refundId: непорожній рядок }.
+Ключ Idempotency-Key: refund-<paymentId>.
+Навчальний endpoint api.example.com перехоплюється MSW.
+
+Обмеження: немає розподіленої транзакції та перевірки конкурентних cancel.
+Помилка запису після refund не відкочує повернення коштів.
+Помилка листа не відкочує cancelled; повторне cancel лист не повторює.
+Підтримку ключа ідемпотентності реальним шлюзом слід перевіряти окремо.
+
+Word-звіт зберігається окремо від репозиторію й не додається до Git.

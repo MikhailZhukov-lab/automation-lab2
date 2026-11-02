@@ -1,11 +1,6 @@
-import { defineConfig } from "vitest/config";
-export default defineConfig({
-  test: {
-    coverage: {
-      provider: "v8",
-      include: ["src/parking.ts", "src/delivery.ts"],
-      reporter: ["text", "html", "json-summary"],
-      thresholds: { branches: 90 },
-    },
-  },
-});
+import { defineConfig } from 'vitest/config';
+export default defineConfig({ test: {
+  environment: 'node', include: ['tests/**/*.test.ts'], setupFiles: ['tests/setup.ts'],
+  coverage: { provider: 'v8', include: ['src/**/*.ts'], exclude: ['src/demo.ts'],
+    reporter: ['text', 'html', 'json-summary'], thresholds: { branches: 90 } },
+} });
