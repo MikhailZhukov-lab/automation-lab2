@@ -1,0 +1,23 @@
+{
+  "name": "lab6-playwright",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "install:browsers": "cross-env PLAYWRIGHT_BROWSERS_PATH=0 playwright install chromium firefox",
+    "test": "cross-env PLAYWRIGHT_BROWSERS_PATH=0 playwright test",
+    "test:lab6": "cross-env PLAYWRIGHT_BROWSERS_PATH=0 playwright test",
+    "test:variant1": "cross-env PLAYWRIGHT_BROWSERS_PATH=0 playwright test tests/inventory.spec.js --grep \"Індивідуальний варіант 1\" --project=chromium",
+    "test:variant1:debug": "cross-env PLAYWRIGHT_BROWSERS_PATH=0 playwright test tests/inventory.spec.js --grep \"Індивідуальний варіант 1\" --project=chromium --debug",
+    "test:login:error:debug": "cross-env PLAYWRIGHT_BROWSERS_PATH=0 playwright test tests/login.spec.js --grep \"заблокований користувач\" --project=chromium --debug",
+    "test:lab6:diagnostic": "cross-env PLAYWRIGHT_BROWSERS_PATH=0 playwright test --config playwright.diagnostic.config.js",
+    "report": "playwright show-report",
+    "report:lab6": "playwright show-report",
+    "report:diagnostic": "playwright show-report diagnostic-report",
+    "trace:diagnostic": "cross-env PLAYWRIGHT_BROWSERS_PATH=0 playwright show-trace",
+    "codegen": "cross-env PLAYWRIGHT_BROWSERS_PATH=0 playwright codegen https://www.saucedemo.com"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.65.1",
+    "cross-env": "^7.0.3"
+  }
+}
