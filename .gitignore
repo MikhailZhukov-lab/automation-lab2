@@ -3,3 +3,7 @@ coverage/
 *.log
 .DS_Store
 .vitest/
+node_modules/
+test-results/
+playwright-report/
+diagnostic-report/
