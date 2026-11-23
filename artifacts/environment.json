@@ -1,0 +1,7 @@
+{
+  "node": "v24.14.0",
+  "playwright": "1.65.1",
+  "typescript": "7.0.2",
+  "browser": "159.0.8154.6",
+  "os": "Windows 11 Home"
+}

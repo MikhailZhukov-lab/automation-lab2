@@ -1,0 +1,23 @@
+const { chromium, expect } = require('@playwright/test');
+const fs = require('node:fs');
+const path = require('node:path');
+const { pathToFileURL } = require('node:url');
+(async () => {
+  const browser = await chromium.launch();
+  const page = await browser.newPage({ viewport: { width: 1280, height: 950 } });
+  await page.goto(pathToFileURL(path.resolve('playwright-report/index.html')).href);
+  await expect(page.getByPlaceholder('Search tests')).toBeVisible();
+  await page.screenshot({ path: 'artifacts/html-report.png', fullPage: true });
+  const log = fs.readFileSync('artifacts/test-run.txt', 'utf8').replace(/^\uFEFF/, '');
+  await page.setContent('<html><meta charset="utf-8"><style>body{margin:28px;background:#10151c;color:#e3eaf2}h2{font:20px sans-serif}pre{font:15px/1.55 Consolas;white-space:pre-wrap}</style><h2>CLI output · npm.cmd test · saved process output</h2><pre></pre></html>');
+  await page.locator('pre').textContent();
+  await page.locator('pre').evaluate((el, text) => el.textContent = text, log);
+  await page.screenshot({ path: 'artifacts/cli-output.png', fullPage: true });
+  await page.goto('https://the-internet.herokuapp.com/add_remove_elements/');
+  for(let i=0;i<5;i++) await page.getByRole('button', {name:'Add Element',exact:true}).click();
+  for(let i=0;i<2;i++) await page.getByRole('button', {name:'Delete',exact:true}).first().click();
+  await expect(page.getByRole('button', {name:'Delete',exact:true})).toHaveCount(3);
+  await page.screenshot({path:'artifacts/variant1.png'});
+  fs.writeFileSync('artifacts/environment.json',JSON.stringify({node:process.version,playwright:require('@playwright/test/package.json').version,typescript:require('typescript/package.json').version,browser:browser.version(),os:require('node:os').version()},null,2));
+  await browser.close();
+})();
