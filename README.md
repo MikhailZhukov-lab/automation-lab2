@@ -109,25 +109,3 @@ npx.cmd playwright install chromium # Установити Chromium
 npm.cmd run test:ui # Відкрити графічний режим
 ```
 
-## Звіт
-
-Скрипт формування створює `report/Lab7_Zhukov_variant1.docx` із 7 таблицями,
-3 знімками екрана, 18 лістингами й відповідями на 10 запитань.
-У терміналі для знімка повторно показаний незмінений журнал фінального прогону.
-
-Для цих допоміжних команд потрібні Windows, Python і збережені результати в `artifacts`.
-Вони не потрібні для звичайного запуску тестів.
-
-```powershell
-python -m pip install -r requirements-report.txt # Установити бібліотеки створення та перевірки звіту
-node scripts/capture.cjs # Зняти HTML-звіт і сторінку варіанта; потрібні playwright-report/index.html та artifacts/test-run.txt
-python scripts/capture_terminal.py # Зняти вікно термінала зі збереженим журналом artifacts/test-run.txt
-New-Item -ItemType Directory -Force report | Out-Null # Створити папку для документа
-python scripts/build_report.py # Створити DOCX із результатів JSON і знімків екрана
-python scripts/verify_report.py # Перевірити DOCX та PDF після експорту документа у PDF
-```
-
-Перед перевіркою відкрий створений DOCX у Microsoft Word і збережи PDF як
-`report/Lab7_Zhukov_variant1.pdf`. Скрипт перевірки потребує обох файлів.
-Збережені матеріали в `artifacts` відповідають зафіксованому прогону; після нового
-прогону для нового звіту потрібно також оновити журнал і знімки екрана.
